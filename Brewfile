@@ -13,9 +13,9 @@ install brew-cask
 
 # install casks
 cask install dropbox
-cask install google-chrome
-cask install google-chrome-canary
-cask install firefox
+#cask install google-chrome
+#cask install google-chrome-canary
+#cask install firefox
 cask install iterm2
 cask install github
 cask install vagrant
