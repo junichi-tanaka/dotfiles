@@ -17,6 +17,8 @@ cask install iterm2
 cask install github
 cask install vagrant
 cask install virtualbox
+cask install sublime-text3
+cask install box-sync
 #cask install hipchat
 #cask install intellij-idea-ultimate
 
