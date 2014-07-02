@@ -7,7 +7,7 @@ upgrade
 install mobile-shell
 
 # prepare cask
-tap 'phinze/cask' || true
+tap 'caskroom/cask' || true
 tap 'caskroom/homebrew-versions' || true
 install brew-cask
 
