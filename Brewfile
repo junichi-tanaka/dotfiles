@@ -1,32 +1,31 @@
 # this is junsan's Brewfile
+#
+#  Prerequisites:
+#    $ brew tap Homebrew/brewdler
+#
 
-update
-upgrade
+tap 'caskroom/cask'
+tap 'caskroom/versions'
+tap 'homebrew/brewdler'
+tap 'homebrew/versions'
 
-# brew formulas
-install mobile-shell
+brew 'wget'
+brew 'mobile-shell'
+brew 'jq'
+brew 'mercurial'
 
-# prepare cask
-tap 'caskroom/cask' || true
-tap 'caskroom/homebrew-versions' || true
-install brew-cask
+brew 'go'
+brew 'influxdb'
 
-# install casks
-cask install dropbox
-cask install iterm2
-cask install github
-cask install vagrant
-cask install virtualbox
-cask install sublime-text3
-cask install box-sync
-#cask install hipchat
-#cask install intellij-idea-ultimate
+brew 'rbenv'
+brew 'ruby-build'
 
-# due to 1password doesn't work properly
-#cask install google-chrome
-#cask install google-chrome-canary
-#cask install firefox
+cask 'alfred'
+cask 'box-sync'
+cask 'dropbox'
+cask 'github'
+cask 'iterm2'
+cask 'sublime-text3'
 
-# for Alfred (must enable Spotlight indexing)
-cask install alfred
-cask alfred link
+cask 'virtualbox'
+cask 'vagrant'
