@@ -3,6 +3,9 @@
 #  Prerequisites:
 #    $ brew tap Homebrew/brewdler
 #
+#  Run:
+#    $ brew brewdle
+#
 
 tap 'caskroom/cask'
 tap 'caskroom/versions'
