@@ -1,0 +1,114 @@
+
+set visualbell
+highlight Bell display:none
+
+"" tabを押さなくても補完する
+"set wildoptions=auto
+
+"set focuscontent
+
+"メニュー・ツールバー表示
+"m menubar
+"T toolbar
+"b bookmark bar
+"macではmenubarを設定しても意味ない
+"set guioptions=Cs
+set toolbars=nonavigation,nobookmarks,nomenu
+
+"sで検索プラグインリスト補完+プラグイン自体の補完機能・SはGoogle
+"lで履歴やブックマークからの補完
+"tで開いているタブから補完
+"http://d.hatena.ne.jp/blooo/20100122/1264133472
+"set complete=sblfS
+set complete=blfS
+
+"dでtabが閉じるのを抑制
+map d :echo Date()<CR>
+
+map p :<CR>
+map P :<CR>
+
+"<C-c>でタイトルとURLをコピー(copy.js)
+map <C-c> :copy<CR>
+
+" 上下移動を大きく
+noremap j 5j
+noremap k 5k
+
+" 補完リストの選択をC-n,C-pで
+cmap <C-n> <TAB>
+cmap <C-p> <S-TAB>
+cmap <Down> <TAB>
+cmap <Up> <S-TAB>
+
+" for gmail
+"set passkeys+=mail.google.com:cejkmnopsux/<CR>,gi
+ignorekeys clear
+ignorekeys add mail\.google\.com -except :,t
+
+"js <<EOF
+"dactyl.globalVariables.copy_templates = [
+"    { label: 'decodeURI', value: 'get decoded url',
+"        custom: function() {
+"            var charset = window.document.characterSet;
+"            if (charset == 'UTF-8') {
+"                return decodeURIComponent(buffer.URL);
+"            } else {
+"                return buffer.URL;
+"            }
+"        }
+"    }
+"];
+"
+"//mappings.addUserMap([modes.NORMAL, modes.VISUAL], ['O'],
+"mappings.add([modes.NORMAL, modes.VISUAL], ['O'],
+"    "insert current URL to command line",
+"    function () {
+"        //var cmdline = dactyl.modules.commandline;
+"        var charset = window.document.characterSet;
+"        var URL = buffer.URL;
+"        if (charset == 'UTF-8') {
+"            URL = decodeURIComponent(URL);
+"        }
+"        //commandline.open(':', 'o ' +URL, modes.EX);
+"        CommandExMode().open('o ' +URL);
+"    }
+");
+"
+"EOF
+
+"コマンドモードでimeをoff -> 効かねー
+style -name commandline-ime chrome://* #dactyl-commandline-command input {ime-mode: inactive;}
+
+"-------------------------------------------------------------------------------
+"Firefox config
+
+"ブラウザタイトル
+"set titlestring="Mozilla Firefox 3"
+
+"ダウンロードウィンドウを完了後自動で閉じる
+set! browser.download.manager.closeWhenDone=true
+"ダウンロード履歴をFirefox終了時に削除
+set! browser.download.manager.retention=1
+
+"キャッシュをHDDからRAMに
+set! browser.cache.disk.enable=false
+set! browser.cache.memory.enable=true
+" 単位(KB)
+set! browser.cache.memory.capacity=-1
+
+"ファイルダウンロード完了時のウイルススキャン機能オフ
+set! browser.download.manager.scanWhenDone=false
+
+"アドオンインストール時の待ち時間カット
+set! security.dialog_enable_delay=0
+
+"ページのアクセスキー無効化
+set! ui.key.generalAccessKey=0
+
+"JavaScriptでのウィンドウ移動・リサイズ拒否
+set! dom.disable_window_move_resize=true
+
+"JavaScriptのステータスバー操作を無効化
+set! dom.event.contextmenu.enabled=false
+
