@@ -19,16 +19,16 @@ brew 'mercurial'
 
 brew 'go'
 brew 'influxdb'
+brew 'ghq'
+brew 'peco'
 
 brew 'rbenv'
 brew 'ruby-build'
 
 cask 'alfred'
-cask 'box-sync'
 cask 'dropbox'
-cask 'github'
 cask 'iterm2'
-cask 'sublime-text3'
+cask 'sublime-text'
 
 cask 'virtualbox'
 cask 'vagrant'
