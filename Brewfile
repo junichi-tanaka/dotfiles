@@ -1,16 +1,12 @@
 # this is junsan's Brewfile
 #
-#  Prerequisites:
-#    $ brew tap Homebrew/brewdler
-#
-#  Run:
-#    $ brew brewdle
+#  $ brew install mas
 #
 
-tap 'caskroom/cask'
-tap 'caskroom/versions'
-tap 'homebrew/brewdler'
-tap 'homebrew/versions'
+#tap 'caskroom/cask'
+#tap 'caskroom/versions'
+#tap 'homebrew/brewdler'
+#tap 'homebrew/versions'
 
 brew 'wget'
 brew 'mobile-shell'
@@ -18,7 +14,7 @@ brew 'jq'
 brew 'mercurial'
 
 brew 'go'
-brew 'influxdb'
+#brew 'influxdb'
 brew 'ghq'
 brew 'peco'
 
@@ -32,3 +28,10 @@ cask 'sublime-text'
 
 cask 'virtualbox'
 cask 'vagrant'
+
+mas 'Night Owl', id: 428834068
+mas '1Password', id: 443987910
+mas 'Quiver',    id: 866773894
+mas 'Wunderlist', id: 410628904
+mas 'Microsoft Remote Desktop', id: 715768417
+
