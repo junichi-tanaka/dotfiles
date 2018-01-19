@@ -26,8 +26,8 @@ cask 'alfred'
 cask 'dropbox'
 cask 'iterm2'
 cask 'sublime-text'
-
 cask 'virtualbox'
+cask 'virtualbox-extension-pack'
 cask 'vagrant'
 
 mas 'Night Owl', id: 428834068
