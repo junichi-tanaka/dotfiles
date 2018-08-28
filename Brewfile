@@ -30,6 +30,7 @@ cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'vagrant'
 cask 'vnc-viewer'
+cask 'bettertouchtool'
 
 mas 'Night Owl', id: 428834068
 mas '1Password', id: 443987910
