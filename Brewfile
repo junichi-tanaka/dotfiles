@@ -13,6 +13,7 @@ brew 'mobile-shell'
 brew 'jq'
 brew 'git'
 brew 'mercurial'
+brew "the_silver_searcher"
 
 brew 'go'
 #brew 'influxdb'
