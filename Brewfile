@@ -38,4 +38,4 @@ mas '1Password', id: 443987910
 mas 'Quiver',    id: 866773894
 mas 'Wunderlist', id: 410628904
 mas 'Microsoft Remote Desktop', id: 715768417
-
+mas "Skitch", id: 425955336
