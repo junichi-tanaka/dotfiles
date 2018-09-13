@@ -1,12 +1,6 @@
+#
 # this is junsan's Brewfile
 #
-#  $ brew install mas
-#
-
-#tap 'caskroom/cask'
-#tap 'caskroom/versions'
-#tap 'homebrew/brewdler'
-#tap 'homebrew/versions'
 
 brew 'wget'
 brew 'mobile-shell'
