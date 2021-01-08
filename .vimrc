@@ -26,9 +26,11 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'leafgarland/typescript-vim'
 Plug 'fatih/vim-go'
 
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+
 call plug#end()
 " }}}
-
 
 " モードラインを有効にする
 set modeline
@@ -51,14 +53,39 @@ set smartindent
 " Folding with markers
 set foldmethod=marker
 
+" 保存されていないファイルがあるときは終了前に保存確認
+set confirm
+" 保存されていないファイルがあるときでも別のファイルを開くことが出来る
+set hidden
 
-" seoul256 (dark):
+autocmd Filetype make setlocal noexpandtab
+
+" highlight trailing whitespace in red
+highlight ExtraWhitespace ctermbg=darkred guibg=darkred
+
+nnoremap <C-j> :bp<CR>
+nnoremap <C-k> :bn<CR>
+
+" {{{ seoul256 (dark):
 "   Range:   233 (darkest) ~ 239 (lightest)
 "   Default: 237
 let g:seoul256_background = 233
 colo seoul256
+" }}}
 
+" {{{ vim-airline settings
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
+" }}}
 
-" highlight trailing whitespace in red
-highlight ExtraWhitespace ctermbg=darkred guibg=darkred
+" {{{ NERDTree settings
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+"nnoremap <C-f> :NERDTreeFind<CR>
+
+" Start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+" }}}
 
