@@ -1,6 +1,6 @@
 
 .PHONY: install
-install: vim
+install: vim wezterm
 
 .PHONY: vim
 vim:
@@ -12,3 +12,8 @@ fish:
 	mkdir -p ~/.config
 	ln -sh $(CURDIR)/fish ~/.config/fish
 	fish -c "curl -sL git.io/fisher | source && fisher update"
+
+.PHONY: wezterm
+wezterm:
+	mkdir -p ~/.config
+	ln -sh $(CURDIR)/wezterm ~/.config/wezterm
