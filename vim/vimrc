@@ -24,11 +24,20 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'leafgarland/typescript-vim'
-Plug 'fatih/vim-go'
 
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 
+" Golang
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'mattn/vim-goimports'
+
+" Dart
+Plug 'dart-lang/dart-vim-plugin'
 call plug#end()
 " }}}
 
@@ -89,3 +98,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 " }}}
 
+let g:go_fmt_command = "gofmt"
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+
+let g:dart_format_on_save = 1
