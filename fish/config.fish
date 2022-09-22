@@ -16,4 +16,6 @@ if status is-interactive
     bind \cg __ghq_repository_search
 
     source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+
+    set -gx PATH $PATH $HOME/.krew/bin
 end
