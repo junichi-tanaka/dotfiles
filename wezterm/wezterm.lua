@@ -22,12 +22,17 @@ return {
   },
 
   keys = {
-    {key="p", mods="SUPER|SHIFT", action=wezterm.action{
-        ActivateTabRelative=-1
-    }},
-    {key="n", mods="SUPER|SHIFT", action=wezterm.action{
-        ActivateTabRelative=1
-    }},
-    {key="Enter", mods="SUPER", action="QuickSelect"},
+    {key="p", mods="CMD|SHIFT", action=wezterm.action{ActivateTabRelative=-1}},
+    {key="n", mods="CMD|SHIFT", action=wezterm.action{ActivateTabRelative=1}},
+    {key="1", mods="CMD",       action=wezterm.action{ActivateTab=0}},
+    {key="2", mods="CMD",       action=wezterm.action{ActivateTab=1}},
+    {key="3", mods="CMD",       action=wezterm.action{ActivateTab=2}},
+    {key="4", mods="CMD",       action=wezterm.action{ActivateTab=3}},
+    {key="5", mods="CMD",       action=wezterm.action{ActivateTab=4}},
+    {key="6", mods="CMD",       action=wezterm.action{ActivateTab=5}},
+    {key="7", mods="CMD",       action=wezterm.action{ActivateTab=6}},
+    {key="8", mods="CMD",       action=wezterm.action{ActivateTab=7}},
+    {key="9", mods="CMD",       action=wezterm.action{ActivateTab=8}},
+    {key="Enter", mods="CMD",   action="QuickSelect"},
   }
 }
