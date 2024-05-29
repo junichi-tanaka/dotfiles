@@ -17,3 +17,11 @@ fish:
 wezterm:
 	mkdir -p ~/.config
 	ln -sh $(CURDIR)/wezterm ~/.config/wezterm
+
+.PHONY: keyboard
+keyboard: keyboard/%
+
+.PHONY: keyboard/repeat
+keyboard/repeat:
+	defaults write com.sublimetext.4 ApplePressAndHoldEnabled -bool false
+	defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
