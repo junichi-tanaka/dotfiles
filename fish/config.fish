@@ -19,15 +19,15 @@ if status is-interactive
     source (direnv hook fish |psub)
 
     # google cloud sdk
-    source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
-    set -gx USE_GKE_GCLOUD_AUTH_PLUGIN True
+    #source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+    #set -gx USE_GKE_GCLOUD_AUTH_PLUGIN True
 
     # docker
     #set -gx DOCKER_DEFAULT_PLATFORM linux/$(arch)
 
     fish_add_path /opt/homebrew/opt/grep/libexec/gnubin
-    fish_add_path /opt/homebrew/opt/mysql-client/bin
-    fish_add_path $HOME/.rd/bin
+    #fish_add_path /opt/homebrew/opt/mysql-client/bin
+    #fish_add_path $HOME/.rd/bin
     fish_add_path $HOME/.krew/bin
 
     # OpenSSL@3
@@ -43,4 +43,7 @@ if status is-interactive
     #fish_add_path /opt/homebrew/opt/php@8.2/sbin
     #set -gx LDFLAGS "-L/opt/homebrew/opt/php@8.2/lib"
     #set -gx CPPFLAGS "-I/opt/homebrew/opt/php@8.2/include"
+
+    # git-wt
+    git wt --init fish | source
 end
